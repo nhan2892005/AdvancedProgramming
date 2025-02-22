@@ -1,17 +1,13 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Launch Test",
-            "request": "launch",
-            "mainClass": "UnitTest",
-            "preLaunchTask": "Build Code to bin",
-            "classPaths": [
-                "${workspaceFolder}/bin",
-                "${workspaceFolder}/class"
-            ],
-            "cwd": "${workspaceFolder}"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "UnitTest",
+      "preLaunchTask": "Build Java",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
 }

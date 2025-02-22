@@ -1,50 +1,46 @@
 {
     "version": "2.0.0",
     "tasks": [
-        {
-            "label": "Build Code to bin",
-            "type": "shell",
-            "command": "javac",
-            "args": [
-                "-cp", "class",
-                "-d", "bin",
-                "source/*.java",
-                "util/*.java",
-                "test/*.java",
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": "$javac"
+      {
+        "label": "Build Java",
+        "type": "shell",
+        "command": "javac",
+        "args": [
+          "-g",
+          "-d",
+          "bin",
+          "-cp",
+          "class",
+          "source/*.java",
+          "util/*.java",
+          "test/*.java"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
         },
-        {
-            "label": "Create Jar from .class",
-            "type": "shell",
-            "command": "jar",
-            "args": [
-                "cf",
-                "mylib.jar",
-                "-C",
-                "class",
-                "."
-            ],
-            "group": "build",
-            "problemMatcher": []
-        },
-        {
-            "label": "Debug Java Code",
-            "type": "shell",
-            "command": "java",
-            "args": [
-                "-cp", "class:bin",
-                "Main"
-            ],
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-            "problemMatcher": []
-        }
+        "problemMatcher": [
+          "$javac"
+        ]
+      },
+      {
+        "label": "Build Jar",
+        "type": "shell",
+        "command": "jar",
+        "args": [
+          "cfm",
+          "run.jar",
+          "manifest",
+          "-C",
+          "class",
+          ".",
+          "-C",
+          "bin",
+          "."
+        ],
+        "dependsOn": "Build Java",
+        "group": "build"
+      }
     ]
-}
+  }
+  
