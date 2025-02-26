@@ -13,10 +13,18 @@ public class Knight extends Fighter {
      */
     @Override
     public double getCombatScore() {
-        if (this.getWp() == 1) {
-            return this.getBaseHp();
+        double combatScore = 0.0;
+
+        if (Utility.isSquare(Battle.GROUND)) {
+            combatScore = this.getBaseHp() * 2.0;
+        } else if (this.getWp() == 1) {
+            combatScore = this.getBaseHp();
         } else {
-            return this.getBaseHp() / 10.0;
+            combatScore = this.getBaseHp() / 10.0;
         }
+
+        combatScore = Math.max(0.0, Math.min(999.0, combatScore));
+
+        return combatScore;
     }
 }
