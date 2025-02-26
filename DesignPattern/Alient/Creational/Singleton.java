@@ -1,8 +1,8 @@
-package DesignPattern.Creational;
+package DesignPattern.Alient.Creational;
 import java.util.ArrayList;
 import java.util.List;
-import DesignPattern.Behavioral.Observer;
-import DesignPattern.Structural.Adapter;
+import DesignPattern.Alient.Behavioral.Observer;
+import DesignPattern.Alient.Structural.Adapter;
 
 public class Singleton {
     // Instance duy nhất của Mission Control

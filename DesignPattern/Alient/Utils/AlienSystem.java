@@ -1,4 +1,4 @@
-package DesignPattern.Utils;
+package DesignPattern.Alient.Utils;
 
 public class AlienSystem {
     // Phương thức đặc thù của hệ thống người ngoài hành tinh

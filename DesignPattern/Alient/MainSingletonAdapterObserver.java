@@ -1,7 +1,8 @@
-import DesignPattern.Structural.Adapter;
-import DesignPattern.Creational.Singleton;
-import DesignPattern.Behavioral.Observer;
-import DesignPattern.Utils.AlienSystem;
+package DesignPattern.Alient;
+import DesignPattern.Alient.Structural.Adapter;
+import DesignPattern.Alient.Creational.Singleton;
+import DesignPattern.Alient.Behavioral.Observer;
+import DesignPattern.Alient.Utils.AlienSystem;
 import java.util.Scanner;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Scanner;
  * - Observer: Real-time mission status updates to multiple displays
  * - Adapter: Communication with alien technology systems
  */
-public class Main_SAO {
+public class MainSingletonAdapterObserver {
     public static void main(String[] args) {
         System.out.println("┌─────────────────────────────────────────┐");
         System.out.println("│   SPACE AGENCY OPERATIONS (SAO) 2025    │");

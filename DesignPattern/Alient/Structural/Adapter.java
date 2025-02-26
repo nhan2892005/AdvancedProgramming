@@ -1,5 +1,5 @@
-package DesignPattern.Structural;
-import DesignPattern.Utils.AlienSystem;
+package DesignPattern.Alient.Structural;
+import DesignPattern.Alient.Utils.AlienSystem;
 
 public class Adapter {
     private AlienSystem alienSystem;

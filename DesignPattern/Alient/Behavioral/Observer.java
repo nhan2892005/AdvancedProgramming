@@ -1,4 +1,4 @@
-package DesignPattern.Behavioral;
+package DesignPattern.Alient.Behavioral;
 
 public class Observer {
     private String observerName;
